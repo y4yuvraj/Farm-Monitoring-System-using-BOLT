@@ -30,6 +30,20 @@ Project has two functionality i.e. to give real time information to a farmer abo
 
 #NOTE: we can connect 5V and ground pin of Arduino to 5V and ground of BOLT WI-FI module to power BOLT WI-FI module using Arduino in this way we need only one power supply to power both Arduino and BOLT WI-FI module now we don't have to give supply to both, only one supply given to Arduino is enough through which our WI-FI module will be powered.
 
+1. connect v output of PIR motion sensor to digital pin 4 of BOLT WI-FI module and Vcc pin to 5V and ground pin to ground
+2. connect digital pin of moisture sensor to digital 0 pin of BOLT WI-FI module ,ground pin to ground and voltage pin to 5v supply refer diagram below.
+3. connect light sensor and temperature sensor to A0 and A0 pin of BOLT WI-FI module and Arduino remember that you need resistor for connection of light sensor refer the below diagram for better understanding.
+4. Code for Detection or Alert on Python IDE: Once you can run the Arduino code then we want a python IDE to write the code. You can write either in a virtual machine or your raspberry pi or in windows. I’m using it in windows Python 3.6 IDE. You can download and read documentation to install on your system https://www.python.org/
+5. About libraries we are using external boltiot and requests library only. you can install both of them using pip command on terminal or cmd. For windows you can learn how to do this https://www.liquidweb.com/kb/install-pip-windows/
+6. PYTHON CODE(conf.py) we need to make a configuration file which will have the specific keys for each user/device. We will import this file in our main code and use the various attributes. The advantage of this is that each user will only have to change the contents the configuration file to
+use the product.
+7. in the above configuration file we are mentioning the bolt API key and the device id also we mention the frame rate and multiplication factor for z- analysis.
+8. : PYTHON CODE(temp.py)
+For the above code, the logic is we have to fetch data from bolt serial so we are using the functioning bolt.serialRead('1') but going through the documentation I found that value is 10 instead of 1. Actually while using the value 10 the fetching data is not instant. While using 1 it’s an instant data fetched but with a drawback i.e. in the first iteration it will fetch a bunch of combined data. After getting the data from serial we have to make it in the correct form in my case I’m getting data as {‘value’:’546\n45\n’, ’ success’:’1’} so I need to extract it. So I first converted it into JSON data then using list(data['value'].split("\n")) I get the list so at index 0 I have sensor
+value.
+9. PYTHON CODE(light_anomaly.py)
+In this program we use z-score anomaly detection for sudden change in the data values. We used this concept in detecting any sudden change in the light value, and temperature value too so this method is also used in the above program.
+
 
 
 ## Challenges!!
