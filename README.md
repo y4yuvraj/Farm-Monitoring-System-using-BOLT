@@ -52,6 +52,8 @@ For temperature sensor since it is not connected to WI-FI module directly we wil
 
 <img src="https://drive.google.com/thumbnail?id=1hLiAR1ckXwJee6OdcMZd1uTNholxIl5z">
 
+add bolt along with mailgun and Twilio now build your logic as shown above. Two bolt module is added to fetch two values one for moisture other for light value. logic is like this if moisture value 1 then good moisture otherwise less moisture in the good moisture part if sunlight is above 850 then good amount of sun light else it is not now in the low moisture part we increase the value of i by 1 in each scenario run and this integromat is scheduled to run after every 1 hour if the value of 'i' becomes greater than 6 than it has been 6 hours without enough moisture for crops so we will send an alert to irrigate the farm else we will check sunlight values and send the alert acordingly.
+
 ### Anomaly Detection Alert:
 The assessment of the Z-score is used to detect anomalies. The anomaly here implies that the value of a variable (temperature or light value) exceeds a certain value called bounds. The value range is referred to as boundaries (upper and lower bound). We use the upper limit only to detect the fire warning. The input values, frame size, and multiplication factor are used to calculate these boundaries. The frame size is the minimum number of input values needed for the Z-score analysis and the multiplication factor determines the proximity of the bounds to the input values curve.
 
@@ -61,20 +63,36 @@ Given above is the formula to calculate the bounds. Here the input is represente
 
 
 ## Challenges!!
-Thinking of a way to play these sounds and connecting the keyboard presses to these button.
+Thinking of a way to help Farmer's in increasing their crop productivity using IOT and Machine Learning.
 
 ## Accomplishments
-Since this my first implementaion after the learning process i consider this as an achievement since learnig and application also tells about the progress we have made as a devoloper.
+This was my first project in college that i really worked hard for learning about sensors, machine learning, arduino, python programming and then connecting all of these things was a very big accomplishment for me , I think learning and applying these things are two very differebt thing and a devoloper only learns from practical experiencel.
 
 ## Learning Process
-Along with the practical implementation of HTML, CSS-BootStrap and JavaScript on a website, I learned to deploy a website using Github Pages and many event in javacript.
+Along with the practical implementation IOT, Python, Arduino, Sensors and working our way around these technologies was fun and challenging
 
+## Hardware Components
+I. Bolt IOT Bolt Wi-Fi Module
+II. USB-A to Mini-USB Cable
+III. Resistor 10k Ohm
+IV. Jumping Wires
+V. Arduino Uno
+VI. USB-A to B Cable for Arduino
+VII. Moisture Sensor
+VIII. Temperature Sensor
+IX. Light Sensor
+X. Motion Sensor
 
-## Built With
-* HTML
-* CSS-BootStrap
-* JavaScript
+## Software App and Online Components
+1. Bolt IOT android app
+2. Arduino IDE
+3. Python 3
+4. Integromat
+5. Bolt Cloud
+6. Twilio
+7. Mailgun
+8. Webhook
 
 # What's next?
-With this packed up my next goal is ReactJs and NodeJs.
+i want to explore the world of machine learning i am sure i that will open few paths for me to help the farmes's.
 
