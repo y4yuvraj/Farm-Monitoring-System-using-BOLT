@@ -1,7 +1,7 @@
 # Farm Monitoring System
 A device that would help farmers to improve crop productivity.
 
-<img src="https://drive.google.com/thumbnail?id=1KzEUAr7NRCK630tdVMUedJPSOMz5_0et" width="2000">
+<img src="https://drive.google.com/thumbnail?id=1KzEUAr7NRCK630tdVMUedJPSOMz5_0et" width="1000">
 ---
 goal: DESIGN A SYSYTEM FOR AGRICULTURE TO IMPROVE THE CROP PRODUCTIVITY.
 
@@ -14,12 +14,12 @@ Project has two functionality i.e. to give real time information to a farmer abo
 ## Demonstartion
 
 ### Alerts:
-<img src="https://drive.google.com/thumbnail?id=1AhapbqPby41NydEyFsuST89Z2leUetJI">
-<img src="https://drive.google.com/thumbnail?id=1_bmP3KrNKMwRIV59TUr5DVUN6ccpwAPi">
+<img src="https://drive.google.com/thumbnail?id=1AhapbqPby41NydEyFsuST89Z2leUetJI" width="1000">
+<img src="https://drive.google.com/thumbnail?id=1_bmP3KrNKMwRIV59TUr5DVUN6ccpwAPi" width="1000">
 
 ### Final Look:
-<img src="https://drive.google.com/thumbnail?id=1W0xSeU9AteXJKOL5_mpJleAi81a0Cm83">
-<img src="https://drive.google.com/thumbnail?id=17tczAXqNBw20EU7l-Z1FGl9prCa0TWG8">
+<img src="https://drive.google.com/thumbnail?id=1W0xSeU9AteXJKOL5_mpJleAi81a0Cm83" width="1000">
+<img src="https://drive.google.com/thumbnail?id=17tczAXqNBw20EU7l-Z1FGl9prCa0TWG8" width="1000">
 
 ## Process
 1. Connect your Arduino to your computer and upload the plantproject.ino program to the Arduino using Arduino IDE(this is done because the cables for communication between bolt WIFI module and Arduino should not be connected before uploading this code ,cable used for communication can be identified easily it is labeled as Rx and Tx in both Arduino and BOLT WI-FI module)
@@ -48,16 +48,16 @@ This is a very simple code in which we read the sensor value using mybolt.digita
 11. Integromat
 For temperature sensor since it is not connected to WI-FI module directly we will make a web request for Integromat scenario. Which will send the notification and text message to our device which generates the current situation according to the condition mentioned in the scenario. In Integromat add webhook and twilio or any other service you want to use. Right click on empty screen -> add module -> webhook -> custom webhook trigger when data recieved -> add -> give any name and save copy the link from there and paste it in your temp.py program The conditions are if temperature>55 then it’s a abnormal temperature alert, else everything is normal. Make the scenario as shown below. we can easily change the schedule of Integromat and also in python code we can decide how often to take readings we can make the program sleep for certain interval of time and hence take reading for example after every 20 minutes or every hour.
 
-<img src="https://drive.google.com/thumbnail?id=1Pm47S7rPT-dZbGXI-rHxNwOip8UxiZ7w">
+<img src="https://drive.google.com/thumbnail?id=1Pm47S7rPT-dZbGXI-rHxNwOip8UxiZ7w" width="1000">
 
-<img src="https://drive.google.com/thumbnail?id=1hLiAR1ckXwJee6OdcMZd1uTNholxIl5z">
+<img src="https://drive.google.com/thumbnail?id=1hLiAR1ckXwJee6OdcMZd1uTNholxIl5z" width="1000">
 
 add bolt along with mailgun and Twilio now build your logic as shown above. Two bolt module is added to fetch two values one for moisture other for light value. logic is like this if moisture value 1 then good moisture otherwise less moisture in the good moisture part if sunlight is above 850 then good amount of sun light else it is not now in the low moisture part we increase the value of i by 1 in each scenario run and this integromat is scheduled to run after every 1 hour if the value of 'i' becomes greater than 6 than it has been 6 hours without enough moisture for crops so we will send an alert to irrigate the farm else we will check sunlight values and send the alert acordingly.
 
 ### Anomaly Detection Alert:
 The assessment of the Z-score is used to detect anomalies. The anomaly here implies that the value of a variable (temperature or light value) exceeds a certain value called bounds. The value range is referred to as boundaries (upper and lower bound). We use the upper limit only to detect the fire warning. The input values, frame size, and multiplication factor are used to calculate these boundaries. The frame size is the minimum number of input values needed for the Z-score analysis and the multiplication factor determines the proximity of the bounds to the input values curve.
 
-<img src="https://drive.google.com/thumbnail?id=15UjkILzw_XAwynQV5lIjm0b-dijtTZ2C">
+<img src="https://drive.google.com/thumbnail?id=15UjkILzw_XAwynQV5lIjm0b-dijtTZ2C" width="1000">
 
 Given above is the formula to calculate the bounds. Here the input is represented as 'Vi', 'r' denotes the frame size and 'C' is the multiplication factor. Firstly we calculate the mean (Mn) of the input values (for every new input, the mean is calculated again). The variation of input value (from the mean) is given as : (Vi - Mn)^2. The Z-score (Zn) is calculated as shown above ( square root of the mean of the variation of each input value multiplied by the multiplication factor). The bounds are represented as 'Tn' and the upper bound is calculated as (Vi + Zn) and the lower bound is calculated as (Vi - Zn).The frame size and multiplication factor are determined using the trial-and-error method.
 
