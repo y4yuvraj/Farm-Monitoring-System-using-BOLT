@@ -1,20 +1,16 @@
-# DrumPlay
-fun little website where you can play drums
----
-link:
-https://y4yuvraj.github.io/DrumPlay/index
+# Farm Monitoring System
+A device that would help farmers to improve crop productivity.
 
-works best in PC
+<img src="https://drive.google.com/file/d/1KzEUAr7NRCK630tdVMUedJPSOMz5_0et/view?usp=sharing">
 ---
-
----
-goal:Devolop and Deploy this website using javascript and github pages.
+goal: DESIGN A SYSYTEM FOR AGRICULTURE TO IMPROVE THE CROP PRODUCTIVITY.
 
 ## Introduction
-This website was made during my learning phase so this is basically my first website that i made.
+A device that would help farmers to improve crop productivity by safeguarding the crops from intruder or fire by sending an alert to the farmer if someone tries to destroy the crops, also this will give real time feedbacks about the moisture in the soil along with temperature and amount of light which are essential for healthy crops.
 
 ## Working
-This website have multiple buttons you can use your keyboard to play sounds from an actual drum!!
+Project has two functionality i.e. to give real time information to a farmer about moisture in soil, the amount of light and temperature also this project can alert farmer against a fire or a intruder trying to destroy crops. It is not easy for a farmer to manage farm all by himself also the factors like temperature and moisture cannot be measured easily and many others factors like animals, fire can destroy the crops this project will solve all these problems, we can detect sudden change in temperature and light(z-score analysis) and notify the farmer using message or e-mail, also in case of fire or an unwanted intruder we can send an alert to farmer if anomaly detected in temperature or an intruder tries to destroy crop.
+
 
 ## Process
 This was my first mini project that i did after i had some command in javascript, html, css etc.
