@@ -22,7 +22,10 @@ Project has two functionality i.e. to give real time information to a farmer abo
 <img src="https://drive.google.com/thumbnail?id=17tczAXqNBw20EU7l-Z1FGl9prCa0TWG8">
 
 ## Process
-This was my first mini project that i did after i had some command in javascript, html, css etc.
+1. Connect your Arduino to your computer and upload the plantproject.ino program to the Arduino using Arduino IDE(this is done because the cables for communication between bolt WIFI module and Arduino should not be connected before uploading this code ,cable used for communication can be identified easily it is labeled as Rx and Tx in both Arduino and BOLT WI-FI module)
+2.Code for Sensors on Arduino IDE(plantproject.ino): There is a simple code in the folder where are calling Serial to run on 9600 baud rate. And then taking the input using analogRead() for pin A0 of Arduino.
+3.now unplug the Arduino and make the connection.
+
 
 ## Challenges!!
 Thinking of a way to play these sounds and connecting the keyboard presses to these button.
