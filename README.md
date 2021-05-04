@@ -13,11 +13,11 @@ Project has two functionality i.e. to give real time information to a farmer abo
 
 ## Demonstartion
 
-Alerts:
+### Alerts:
 <img src="https://drive.google.com/thumbnail?id=1AhapbqPby41NydEyFsuST89Z2leUetJI">
 <img src="https://drive.google.com/thumbnail?id=1_bmP3KrNKMwRIV59TUr5DVUN6ccpwAPi">
 
-Final Look:
+### Final Look:
 <img src="https://drive.google.com/thumbnail?id=1W0xSeU9AteXJKOL5_mpJleAi81a0Cm83">
 <img src="https://drive.google.com/thumbnail?id=17tczAXqNBw20EU7l-Z1FGl9prCa0TWG8">
 
