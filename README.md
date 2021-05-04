@@ -45,8 +45,12 @@ value.
 In this program we use z-score anomaly detection for sudden change in the data values. We used this concept in detecting any sudden change in the light value, and temperature value too so this method is also used in the above program.
 10. PYTHON CODE(intruder.py)
 This is a very simple code in which we read the sensor value using mybolt.digitalRead('pin no') if this value is equal to 1 we send an alert
-11. : Integromat
+11. Integromat
 For temperature sensor since it is not connected to WI-FI module directly we will make a web request for Integromat scenario. Which will send the notification and text message to our device which generates the current situation according to the condition mentioned in the scenario. In Integromat add webhook and twilio or any other service you want to use. Right click on empty screen -> add module -> webhook -> custom webhook trigger when data recieved -> add -> give any name and save copy the link from there and paste it in your temp.py program The conditions are if temperature>55 then it’s a abnormal temperature alert, else everything is normal. Make the scenario as shown below. we can easily change the schedule of Integromat and also in python code we can decide how often to take readings we can make the program sleep for certain interval of time and hence take reading for example after every 20 minutes or every hour.
+
+<img src="https://drive.google.com/thumbnail?id=1Pm47S7rPT-dZbGXI-rHxNwOip8UxiZ7w">
+
+<img src="https://drive.google.com/thumbnail?id=1hLiAR1ckXwJee6OdcMZd1uTNholxIl5z">
 
 ### Anomaly Detection Alert:
 The assessment of the Z-score is used to detect anomalies. The anomaly here implies that the value of a variable (temperature or light value) exceeds a certain value called bounds. The value range is referred to as boundaries (upper and lower bound). We use the upper limit only to detect the fire warning. The input values, frame size, and multiplication factor are used to calculate these boundaries. The frame size is the minimum number of input values needed for the Z-score analysis and the multiplication factor determines the proximity of the bounds to the input values curve.
