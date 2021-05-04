@@ -1,7 +1,7 @@
 # Farm Monitoring System
 A device that would help farmers to improve crop productivity.
 
-<img src="https://drive.google.com/file/d/1KzEUAr7NRCK630tdVMUedJPSOMz5_0et/view?usp=sharing">
+<img src="https://drive.google.com/thumbnail?id=1KzEUAr7NRCK630tdVMUedJPSOMz5_0et">
 ---
 goal: DESIGN A SYSYTEM FOR AGRICULTURE TO IMPROVE THE CROP PRODUCTIVITY.
 
