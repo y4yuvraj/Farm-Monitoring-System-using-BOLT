@@ -1,7 +1,7 @@
 # Farm Monitoring System
 A device that would help farmers to improve crop productivity.
 
-<img src="https://drive.google.com/thumbnail?id=1KzEUAr7NRCK630tdVMUedJPSOMz5_0et">
+<img src="https://drive.google.com/thumbnail?id=1KzEUAr7NRCK630tdVMUedJPSOMz5_0et" width="200">
 ---
 goal: DESIGN A SYSYTEM FOR AGRICULTURE TO IMPROVE THE CROP PRODUCTIVITY.
 
@@ -72,16 +72,16 @@ This was my first project in college that i really worked hard for learning abou
 Along with the practical implementation IOT, Python, Arduino, Sensors and working our way around these technologies was fun and challenging
 
 ## Hardware Components
-I. Bolt IOT Bolt Wi-Fi Module
-II. USB-A to Mini-USB Cable
-III. Resistor 10k Ohm
-IV. Jumping Wires
-V. Arduino Uno
-VI. USB-A to B Cable for Arduino
-VII. Moisture Sensor
-VIII. Temperature Sensor
-IX. Light Sensor
-X. Motion Sensor
+1. Bolt IOT Bolt Wi-Fi Module
+2. USB-A to Mini-USB Cable
+3. Resistor 10k Ohm
+4. Jumping Wires
+5. Arduino Uno
+6. USB-A to B Cable for Arduino
+7. Moisture Sensor
+8. Temperature Sensor
+9. Light Sensor
+10. Motion Sensor
 
 ## Software App and Online Components
 1. Bolt IOT android app
